@@ -8,14 +8,16 @@ module Yml2utx
       
       @data = {}
       @value = []
-      @name = ''
+      @name = 'DICT'
       @kl = @name
 
       if not dat.empty?
         @data = dat
         @values = []
         @name = @data['name']
+        raise 'dictonary name to long. only 4 letters' if @name.length > 4
         @kl = @data['kl'] || @name 
+        raise 'kl name is to long. please 12 letters' if @kl.length > 12 
         build
       end
     end

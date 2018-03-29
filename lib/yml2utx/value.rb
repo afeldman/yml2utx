@@ -13,7 +13,7 @@ module Yml2utx
         
       @comment = value['comment']
       @name = value['name']
-
+      
       @lang = []
       
       @@counter+=1

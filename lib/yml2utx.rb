@@ -1,4 +1,3 @@
-require 'pp'
 require 'yaml'
 
 require_relative 'yml2utx/parse_yml'
