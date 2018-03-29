@@ -1,0 +1,11 @@
+---
+name: test
+kl: test_kl
+content:
+  - value:
+      name: test2
+      id: 1
+      lang:
+        - en: tested
+        - gr: testet
+          
