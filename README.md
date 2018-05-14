@@ -1,8 +1,11 @@
 # Yml2utx
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/yml2utx`. To experiment with that code, run `bin/console` for an interactive prompt.
+A FANUC robot contoler software makes it possible to change the program language according to the system language. Sadly FANUC uses a own language code.
 
-TODO: Delete this and the text above, and describe your gem
+I build this project to make it more easy for me building dictionaries. FANUC calls the files .UTX
+To use the .UTX use the ktrans compiler to make a .TX file. The .TX file can load into the controller.
+
+This projects helps you building a UTX file with the translation.
 
 ## Installation
 
@@ -22,7 +25,38 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To write the .UTX file set the dictonary name. This name is used for the file name. FANUC has the restriction that the directory file is named with a four charactar name and the two character contry code.
+The kl file name containing all the karel Variable names can contain 12 charaters.
+
+```
+---
+name: test
+kl: test_kl
+content:
+  - value:
+      name: test
+      id: 1
+      lang:
+        - en: run
+        - gr: start
+  - value:
+       name: test2
+       id: 2
+       lang:
+	- en: stop
+	- gr: stopp
+```
+
+As you can see the structure of the YAML file.
+
+1. the dictionary name. The name length is limited to 4 characters
+2. the KAREL file name. The name length is limited to 12 characters
+3. the content with the different values.
+   3.1 the name of the variable. This will be translat into the KAREL Variable name.
+   3.2 the id. The ID is the first element in the line of the .UTX file and has to be unique.
+   3.3 the language code with the label
+
+The system checks the country code and builds one seperate file for each new language code. 
 
 ## Development
 
