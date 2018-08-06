@@ -9,15 +9,15 @@ Gem::Specification.new do |spec|
   spec.authors       = ["anton feldmann"]
   spec.email         = ["anton.feldmann@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{build fanuc robot language files given a yaml file.}
+  spec.description   = %q{this Project uses a yaml file to build the utx file for the fanuc robot contoller. the utx file contains the dictionary information for a specific language.}
+  spec.homepage      = "http://github.com/afeldman/yml2utx"
   spec.license       = "MIT"
- 
+
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata['allowed_push_host'] = "No special needs"
   else
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
