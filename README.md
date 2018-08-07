@@ -1,6 +1,6 @@
 # Yml2utx
 
-A FANUC robot contoler software makes it possible to change the program language according to the system language. Sadly FANUC uses a own language code.
+A FANUC robot contoller software makes it possible to change the program language according to the system language. Sadly FANUC uses a own language code.
 
 I build this project to make it more easy for me building dictionaries. FANUC calls the files .UTX
 To use the .UTX use the ktrans compiler to make a .TX file. The .TX file can load into the controller.
@@ -56,7 +56,7 @@ As you can see the structure of the YAML file.
    3.2 the id. The ID is the first element in the line of the .UTX file and has to be unique.
    3.3 the language code with the label
 
-The system checks the country code and builds one seperate file for each new language code. 
+The system checks the country code and builds one seperate file for each new language code.
 
 ## Development
 
@@ -66,10 +66,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/yml2utx.
+Bug reports and pull requests are welcome on GitHub at https://github.com/afeldman/yml2utx.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
